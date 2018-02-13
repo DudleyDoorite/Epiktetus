@@ -82,7 +82,8 @@ namespace UnitTests
         public void Test_Session_AddStep()
         {
             Session mySession = new Session() { Name = "Unit TestSession" };
-            
+            mySession.AddaStep("title", Epik.EpisodeManager.Workflow.Steps.StepTypes.FileMover);
+            Assert.IsTrue(mySession.Steps.Count == 1);
         }
 
         [TestMethod]
@@ -93,7 +94,9 @@ namespace UnitTests
         [TestMethod]
         public void Test_Session_AddStepFileMove()
         {
-            Assert.Inconclusive();
+            Session mySession = new Session() { Name = "Unit TestSession" };
+            mySession.AddaStep("title", Epik.EpisodeManager.Workflow.Steps.StepTypes.FileMover);
+            Assert.IsTrue(mySession.StepFileMovers.Count == 1);
         }
         [TestMethod]
         public void Test_Session_RemoveStepFileMove()
@@ -105,28 +108,48 @@ namespace UnitTests
         [TestMethod]
         public void Test_Session_Create_StepFileMove()
         {
-            Assert.Inconclusive();
+            Epik.EpisodeManager.Workflow.Steps.StepFileMove sfm = new Epik.EpisodeManager.Workflow.Steps.StepFileMove();
+            Assert.IsInstanceOfType(sfm, typeof(Epik.EpisodeManager.Workflow.Steps.StepFileMove));
         }
         [TestMethod]
         public void Test_Session_StepFileMove_Input()
         {
-            Assert.Inconclusive();
+            string target = @"C:\dev\test.txt";
+            Epik.EpisodeManager.Workflow.Steps.StepFileMove sfm = new Epik.EpisodeManager.Workflow.Steps.StepFileMove() {  InputFile = target};
+            string actual = sfm.InputFile;
+            Assert.IsTrue(actual == target);
         }
+        [TestMethod]
         public void Test_Session_StepFileMove_Output()
         {
-            Assert.Inconclusive();
+            string target = @"C:\dev\test.txt";
+            Epik.EpisodeManager.Workflow.Steps.StepFileMove sfm = new Epik.EpisodeManager.Workflow.Steps.StepFileMove() { Output = target};
+            string actual = sfm.Output;
+            Assert.IsTrue(actual == target);
         }
+        [TestMethod]
         public void Test_Session_StepFileMove_Copy()
         {
-            Assert.Inconclusive();
+            bool target = true;
+            Epik.EpisodeManager.Workflow.Steps.StepFileMove sfm = new Epik.EpisodeManager.Workflow.Steps.StepFileMove() { Copy = true};
+            bool actual = sfm.Copy;
+            Assert.IsTrue(actual == target);
         }
+        [TestMethod]
         public void Test_Session_StepFileMove_Move()
         {
-            Assert.Inconclusive();
+            bool target = false;
+            Epik.EpisodeManager.Workflow.Steps.StepFileMove sfm = new Epik.EpisodeManager.Workflow.Steps.StepFileMove() { Copy = false };
+            bool actual = sfm.Copy;
+            Assert.IsTrue(actual == target);
         }
+        [TestMethod]
         public void Test_Session_StepFileMove_Overwrite()
         {
-            Assert.Inconclusive();
+            bool target = true;
+            Epik.EpisodeManager.Workflow.Steps.StepFileMove sfm = new Epik.EpisodeManager.Workflow.Steps.StepFileMove() {  Overwite = true};
+            bool actual = sfm.Overwite;
+            Assert.IsTrue(actual == target);
         }
         #endregion
 
