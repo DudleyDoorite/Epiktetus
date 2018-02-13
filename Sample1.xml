@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Session xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Epiktetus.net">
+  <Name>SampleSession</Name>
+  <Steps>
+    <Title>Copy Raw Video To Conversion Folder</Title>
+    <Index>0</Index>
+    <Id>897374af-d3b0-4584-ae7e-54313e011bd5</Id>
+    <State>Pending</State>
+    <StepType>FileMover</StepType>
+  </Steps>
+  <Steps>
+    <Title>Copy Raw Video To NAS Backup Folder</Title>
+    <Index>1</Index>
+    <Id>19d1ea30-cb89-4916-bd16-cbcce0a50108</Id>
+    <State>Pending</State>
+    <StepType>FileMover</StepType>
+  </Steps>
+  <Steps>
+    <Title>Convert Raw Video</Title>
+    <Index>2</Index>
+    <Id>34d9fcb8-bdbf-4490-8554-39935a51987b</Id>
+    <State>Pending</State>
+    <StepType>CommandPrompt</StepType>
+  </Steps>
+  <StepFileMovers>
+    <ID>897374af-d3b0-4584-ae7e-54313e011bd5</ID>
+    <Overwite>false</Overwite>
+    <Copy>false</Copy>
+  </StepFileMovers>
+  <StepFileMovers>
+    <ID>19d1ea30-cb89-4916-bd16-cbcce0a50108</ID>
+    <Overwite>false</Overwite>
+    <Copy>false</Copy>
+  </StepFileMovers>
+</Session>

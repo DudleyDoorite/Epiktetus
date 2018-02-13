@@ -1,0 +1,9 @@
+Create a Session or Episodes WorkFlow Session
+Each Step will start as manual 
+Each Step will have a status 
+Each Session will save its current state so it can be resumes at anytime.
+Each step should create logs for troubleshooting issues
+
+
+Each step should have a trigger -> Action
+

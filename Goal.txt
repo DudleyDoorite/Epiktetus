@@ -1,0 +1,11 @@
+- Record the video, this file(s) is saved in a "captures" folder
+- Run a batch file that generates an episode folder and copies a template txt file into it for gathering the title, description and keywords
+- Run a batch file that converts the recorded video to a version that works better with my editor
+- Move the new video file to the episode folder
+- Edit the video
+- Save a screenshot and other assets as needed to the episode folder
+- Render to the espisode folder
+- Run a powershell script to compress a copy of the save game to the episode folder and remove it from the game
+- Upload rendered video to YouTube, copy/paste from text file to YouTube, create thumbnail and upload to YT
+- Archive episode folder to my NAS
+And the above is mostly done in stages over the period of about a week.
